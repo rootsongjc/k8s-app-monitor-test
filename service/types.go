@@ -3,7 +3,7 @@ package service
 // PerformanceIndex the application's performance
 type PerformanceIndex struct {
 	FailRatio     float64 `json:"failRatio"`
-	FailAmout     int64   `josn:"failAmount"`
+	FailAmout     int64   `json:"failAmount"`
 	AccessAmount  int64   `json:"accessAmount"`
 	MaxConcurrent int64   `json:"maxConcurrent"`
 	MinLatency    int64   `json:"minLatency"`
