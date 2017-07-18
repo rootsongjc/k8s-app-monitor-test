@@ -30,7 +30,7 @@ deploy:
    - internal/docker-push:
        username: $USERNAME
        password: $PASSWORD
-       cmd: /pipeline/source/
+       cmd: /pipeline/source/k8s-app-monitor-test
        port: "3000"
        tag: latest
        repository: jimmysong/k8s-app-monitor-test
