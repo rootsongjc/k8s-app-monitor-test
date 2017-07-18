@@ -3,3 +3,5 @@
 # Kubernetes application monitoring test
 This is an application for kubernetes monitoring used by [kubernetes-handbook](https://github.com/rootsongjc/kubernetes-handbook)
 
+See the API definition in [api.html](api.html).
+
