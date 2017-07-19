@@ -3,7 +3,7 @@ package service
 // PerformanceIndex the application's performance
 type PerformanceIndex struct {
 	FailRatio     float64 `json:"failRatio"`
-	FailAmout     int64   `json:"failAmount"`
+	FailAmount    int64   `json:"failAmount"`
 	AccessAmount  int64   `json:"accessAmount"`
 	MaxConcurrent int64   `json:"maxConcurrent"`
 	MinLatency    int64   `json:"minLatency"`
@@ -22,7 +22,7 @@ func (m *Metric) copyMetric(metric Metric) {
 	m.Host = metric.Host
 	m.AppName = metric.AppName
 	m.Domain = metric.Domain
-	m.FailAmout = metric.FailAmout
+	m.FailAmount = metric.FailAmount
 	m.FailRatio = metric.FailRatio
 	m.AccessAmount = metric.AccessAmount
 	m.MaxConcurrent = metric.MaxConcurrent
