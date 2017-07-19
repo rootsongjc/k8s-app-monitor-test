@@ -3,6 +3,7 @@ package service
 import (
 	"errors"
 	"math/rand"
+	"os"
 	"strings"
 )
 
@@ -36,6 +37,6 @@ func (repo *inMemoryMetricRepository) getAppMetric(appName string) (metric Metri
 }
 
 func (repo *inMemoryMetricRepository) newFakeMetric() {
-	repo.AppMetric = Metric{PerformanceIndex{rand.Float64(), rand.Int63n(100), rand.Int63n(100), rand.Int63n(100), rand.Int63n(100), rand.Int63n(100)}, "test-host", "test-app", "test-domain"}
-	//m := Metric{PerformanceIndex{0, 0, 0, 0, 0, 0}, os.Getenv("HOSTNAME"), "test-app", os.Getenv("HOSTNAME")}
+	repo.AppMetric = Metric{PerformanceIndex{rand.Float64(), rand.Int63n(100), rand.Int63n(100), rand.Int63n(100), rand.Int63n(100),
+		rand.Int63n(100)}, os.Getenv("HOSTNAME"), "test-app", "test-domain"}
 }
