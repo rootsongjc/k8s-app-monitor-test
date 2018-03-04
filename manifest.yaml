@@ -12,12 +12,15 @@ spec:
     spec:
       containers:
       - image: jimmysong/k8s-app-monitor-test:latest
+        imagePullPolicy: Always
         name : app
         ports:
         - containerPort: 3000
         env: 
         - name: APP_PORT
           value: "3000"
+        - name: SERVICE_NAME
+          value: "k8s-app-monitor-test"
 ---
 apiVersion: v1
 kind: Service
